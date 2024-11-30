@@ -15,7 +15,7 @@ make git-submodule
 
 ## 3. Building firmwares
 
-### for VIA
+### ~~for VIA~~
 
 ```sh
 make qmk-clean
@@ -30,6 +30,11 @@ Please change `kb`, `kr` and `km` when build other.
 make vial-qmk-clean
 kb=crkbd make vial-qmk-init
 kb=crkbd kr=rev4_1/standard km=vial make vial-qmk-compile
+```
+For corne, connect each half or the keyboard, whilepressing `q` or `p`, respectively.
+This sets the keyboard into bootloader mode.
+```sh
+kb=crkbd kr=rev4_1/standard km=vial make vial-qmk-flash
 ```
 A built data will be stored on `keyboards/crkbd/vial-kb/vial-qmk/.build`\
 Please change `kb`, `kr` and `km` when build other.
